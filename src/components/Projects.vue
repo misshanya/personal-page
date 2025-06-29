@@ -3,6 +3,7 @@ import Project from './Project.vue';
 import { motion } from 'motion-v';
 
 const projects = [
+    { title: "URL Shortener", desc: "URL Shortener with microservices architecture", link: "https://github.com/misshanya/url-shortener" },
     { title: "Mitter", desc: "My social network", link: "https://github.com/misshanya/mitter" },
     { title: "DNS Switcher", desc: "DNS Server that changes the upstream if current doesn't work", link: "https://github.com/misshanya/dns-switcher" },
     { title: "TGSH", desc: "Telegram bot that provides shell access to your machine without public ip", link: "https://github.com/misshanya/tgsh" },
