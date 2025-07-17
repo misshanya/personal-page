@@ -4,7 +4,7 @@ import { motion } from 'motion-v';
 
 <template>
     <div class="me">
-        <motion.div class="desc" :initial="{ scale: 0 }" :animate="{ scale: 1 }">I'm <a href="https://github.com/misshanya">Mishanya</a> <br> Backend Dev and 15 yo student</motion.div>
+        <motion.div class="desc" :initial="{ scale: 0 }" :animate="{ scale: 1 }">I'm <a href="https://github.com/misshanya">Mishanya</a> <br> Backend Dev and 16 yo student</motion.div>
     </div>
 </template>
 
