@@ -60,6 +60,7 @@ const projects = [
     .container {
         height: auto;
         min-height: 100vh;
+        padding-bottom: 120px;
     }
 
     .title {
