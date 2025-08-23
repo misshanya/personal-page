@@ -55,4 +55,20 @@ const projects = [
     gap: 3rem;
 
 }
+
+@media (max-width: 1024px) {
+    .container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .title {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .projects {
+        flex-direction: column;
+    }
+}
 </style>

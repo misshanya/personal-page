@@ -22,6 +22,12 @@ import { motion } from 'motion-v';
     font-size: 20px;
 }
 
+@media (max-width: 1024px) {
+    .about {
+        padding: 30px;
+    }
+}
+
 strong {
     color: #8DD8FF;
 }

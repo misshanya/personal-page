@@ -23,6 +23,16 @@ import { motion } from 'motion-v';
     text-align: center;
 }
 
+@media (max-width: 1024px) {
+    .desc {
+        font-size: 20px;
+    }
+
+    .desc a {
+        font-size: 36px;
+    }
+}
+
 .desc a {
     text-decoration: none;
     color: var(--color-heading);

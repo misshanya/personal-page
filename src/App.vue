@@ -8,7 +8,7 @@ import Projects from './components/Projects.vue';
   <main class="snap-container">
     <section class="snap-section"><Hi/></section>
     <section class="snap-section"><AboutMe/></section>
-    <section class="snap-section"><Projects/></section>
+    <section class="snap-section projects-section"><Projects/></section>
   </main>
 </template>
 
@@ -24,5 +24,12 @@ import Projects from './components/Projects.vue';
 .snap-section {
   height: 100vh;
   scroll-snap-align: start;
+}
+
+@media (max-width: 1024px) {
+  .projects-section {
+    height: auto;
+    min-height: 100vh;
+  }
 }
 </style>
