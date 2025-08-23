@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import Project from './Project.vue';
 import { motion } from 'motion-v';
+import { ref } from 'vue';
+import { useIntersectionObserver } from '@vueuse/core';
+
+const projectsContainer = ref(null)
+const areProjectsVisible = ref(false)
 
 const projects = [
     { title: "URL Shortener", desc: "URL Shortener with microservices architecture", link: "https://github.com/misshanya/url-shortener" },
@@ -8,13 +13,23 @@ const projects = [
     { title: "DNS Switcher", desc: "DNS Server that changes the upstream if current doesn't work", link: "https://github.com/misshanya/dns-switcher" },
     { title: "TGSH", desc: "Telegram bot that provides shell access to your machine without public ip", link: "https://github.com/misshanya/tgsh" },
 ]
+
+useIntersectionObserver(
+    projectsContainer,
+    ([{ isIntersecting }]) => {
+        if (isIntersecting) {
+            areProjectsVisible.value = true;
+        }
+    }
+)
 </script>
 
 <template>
-    <div class="container">
+    <div class="container" ref="projectsContainer">
         <div class="title">My projects</div>
         <div class="projects">
             <motion.div
+                v-if="areProjectsVisible"
                 v-for="(p, i) in projects"
                 :key="i"
                 :initial="{ opacity: 0, y: 50 }"
