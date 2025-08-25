@@ -1,13 +1,54 @@
 <script setup lang="ts">
 import { motion } from 'motion-v';
+import { ref } from 'vue';
+import { useIntersectionObserver } from '@vueuse/core';
+
+const aboutContainer = ref(null)
+const areAboutVisible = ref(false)
+
+useIntersectionObserver(
+    aboutContainer,
+    ([{ isIntersecting }]) => {
+        if (isIntersecting) {
+            areAboutVisible.value = true;
+        }
+    }
+)
 </script>
 
 <template>
-    <motion.div
-        class="about"
+    <div
+        class="container"
+        ref="aboutContainer"
     >
-        <p>Currently I use <strong>Go</strong> language. I'm trying to write frontend (this page).</p>
-    </motion.div>
+        <div class="about"
+        v-if="areAboutVisible"
+        >
+            <motion.div
+            :initial='{ opacity: 0, y: 20 }'
+            :animate="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 1.5, delay: 0.2, type: 'spring' }"
+            >
+                <p>I write backend in <img src="/go.svg"> language</p>
+            </motion.div>
+
+            <motion.div
+            :initial='{ opacity: 0, y: 20 }'
+            :animate="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 1.5, delay: 0.4, type: 'spring' }"
+            >
+                <p>I really love microservices and complex systems</p>
+            </motion.div>
+
+            <motion.div
+            :initial='{ opacity: 0, y: 20 }'
+            :animate="{ opacity: 1, y: 0 }"
+            :transition="{ duration: 1.5, delay: 0.6, type: 'spring' }"
+            >
+                <p>I use <img src="/linux.svg"> on all of my devices</p>
+            </motion.div>
+        </div>
+    </div>
 </template>
 
 <style scoped>
@@ -16,15 +57,26 @@ import { motion } from 'motion-v';
     height: 100vh;
 
     display: flex;
+    flex-direction: column;
+    gap: 30px;
     justify-content: center;
     align-items: center;
 
-    font-size: 20px;
+    font-size: 40px;
+}
+
+.about img {
+    width: 50px;
+    vertical-align: middle;
 }
 
 @media (max-width: 1024px) {
     .about {
         padding: 30px;
+        font-size: 20px;
+    }
+    .about img {
+        width: 30px;
     }
 }
 
