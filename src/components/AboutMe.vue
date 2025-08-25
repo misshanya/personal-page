@@ -19,7 +19,7 @@ useIntersectionObserver(
 <template>
     <div
         class="container"
-        ref="aboutContainer"
+        ref=aboutContainer
     >
         <div class="about"
         v-if="isAboutVisible"
@@ -52,6 +52,16 @@ useIntersectionObserver(
 </template>
 
 <style scoped>
+.container {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .about {
     width: 100%;
     height: 100vh;
