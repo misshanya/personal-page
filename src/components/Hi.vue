@@ -19,7 +19,7 @@ import { motion } from 'motion-v';
             :whilePress="{ scale: 0.95 }"
             href="https://t.me/misshanya7"
             >
-                <img src="/telegram.svg" width="35px">
+                <img src="/telegram.svg" width="40px">
             </motion.a>
         </motion.div>
     </div>
