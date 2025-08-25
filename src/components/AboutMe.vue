@@ -37,7 +37,7 @@ useIntersectionObserver(
             :animate="{ opacity: 1, y: 0 }"
             :transition="{ duration: 1.5, delay: 0.4, type: 'spring' }"
             >
-                <p>I really love microservices and complex systems</p>
+                <p>I really love complex systems</p>
             </motion.div>
 
             <motion.div
