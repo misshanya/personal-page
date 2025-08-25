@@ -4,13 +4,13 @@ import { ref } from 'vue';
 import { useIntersectionObserver } from '@vueuse/core';
 
 const aboutContainer = ref(null)
-const areAboutVisible = ref(false)
+const isAboutVisible = ref(false)
 
 useIntersectionObserver(
     aboutContainer,
     ([{ isIntersecting }]) => {
         if (isIntersecting) {
-            areAboutVisible.value = true;
+            isAboutVisible.value = true;
         }
     }
 )
@@ -22,7 +22,7 @@ useIntersectionObserver(
         ref="aboutContainer"
     >
         <div class="about"
-        v-if="areAboutVisible"
+        v-if="isAboutVisible"
         >
             <motion.div
             :initial='{ opacity: 0, y: 20 }'
