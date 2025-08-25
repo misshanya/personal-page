@@ -4,7 +4,24 @@ import { motion } from 'motion-v';
 
 <template>
     <div class="me">
-        <motion.div class="desc" :initial="{ scale: 0 }" :animate="{ scale: 1 }">I'm <a href="https://github.com/misshanya">Mishanya</a> <br> Backend Dev and 16 yo student</motion.div>
+        <motion.div class="desc" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }">I'm <b>Mishanya</b> <br> Backend Dev and 16 yo student</motion.div>
+        <motion.div class="links" :initial="{ opacity: 0 }" :animate="{ opacity: 1, transition: { duration: 1 } }">
+            <motion.a
+            href="https://github.com/misshanya"
+            :whileHover="{ scale: 1.1 }"
+            :whilePress="{ scale: 0.95 }"
+            >
+                <img src="/github.svg" width="40px" >
+            </motion.a>
+
+            <motion.a
+            :whileHover="{ scale: 1.1 }"
+            :whilePress="{ scale: 0.95 }"
+            href="https://t.me/misshanya7"
+            >
+                <img src="/telegram.svg" width="35px">
+            </motion.a>
+        </motion.div>
     </div>
 </template>
 
@@ -23,17 +40,24 @@ import { motion } from 'motion-v';
     text-align: center;
 }
 
+.links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
 @media (max-width: 1024px) {
     .desc {
         font-size: 20px;
     }
 
-    .desc a {
+    .desc b {
         font-size: 36px;
     }
 }
 
-.desc a {
+.desc b {
     text-decoration: none;
     color: var(--color-heading);
     font-weight: 600;
