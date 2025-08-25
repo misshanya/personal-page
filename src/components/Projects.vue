@@ -19,6 +19,8 @@ useIntersectionObserver(
     ([{ isIntersecting }]) => {
         if (isIntersecting) {
             areProjectsVisible.value = true;
+        } else {
+            areProjectsVisible.value = false;
         }
     }
 )
