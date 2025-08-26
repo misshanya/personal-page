@@ -11,7 +11,7 @@ import { motion } from 'motion-v';
             :whileHover="{ scale: 1.1 }"
             :whilePress="{ scale: 0.95 }"
             >
-                <img src="/github.svg" width="40px" >
+                <img src="/github.svg">
             </motion.a>
 
             <motion.a
@@ -19,7 +19,7 @@ import { motion } from 'motion-v';
             :whilePress="{ scale: 0.95 }"
             href="https://t.me/misshanya7"
             >
-                <img src="/telegram.svg" width="40px">
+                <img src="/telegram.svg">
             </motion.a>
         </motion.div>
     </div>
@@ -36,7 +36,7 @@ import { motion } from 'motion-v';
 }
 
 .desc {
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
 }
 
@@ -47,6 +47,17 @@ import { motion } from 'motion-v';
     gap: 15px;
 }
 
+.links img {
+    width: 80px;
+}
+
+.desc b {
+    text-decoration: none;
+    color: var(--color-heading);
+    font-weight: 600;
+    font-size: 75px;
+}
+
 @media (max-width: 1024px) {
     .desc {
         font-size: 20px;
@@ -55,12 +66,9 @@ import { motion } from 'motion-v';
     .desc b {
         font-size: 36px;
     }
-}
 
-.desc b {
-    text-decoration: none;
-    color: var(--color-heading);
-    font-weight: 600;
-    font-size: 55px;
+    .links img {
+        width: 40px;
+    }
 }
 </style>
