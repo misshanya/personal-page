@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { motion } from 'motion-v';
+
 defineProps<{
     title: string
     desc: string
@@ -7,7 +9,9 @@ defineProps<{
 </script>
 
 <template>
-    <div class="project">
+    <motion.div class="project"
+    :whileHover="{ y: -5 }"
+    >
         <div class="info">
             <div class="title">{{ title }}</div>
             <div class="desc">{{ desc }}</div>
@@ -15,7 +19,7 @@ defineProps<{
         <div class="link">
             <a :href="link">More info</a>
         </div>
-    </div>
+    </motion.div>
 </template>
 
 <style scoped>
