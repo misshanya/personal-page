@@ -31,6 +31,8 @@ defineProps<{
 
     border-radius: 15px;
     text-align: center;
+
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .title {
