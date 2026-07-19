@@ -4,7 +4,7 @@ import { motion } from 'motion-v';
 
 <template>
     <div class="me">
-        <motion.div class="desc" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }">I'm <b>Mishanya</b> <br> Backend Dev and 16 yo student</motion.div>
+        <motion.div class="desc" :initial="{ opacity: 0 }" :animate="{ opacity: 1 }">I'm <b>Mishanya</b> <br> Backend Dev and 17 yo student</motion.div>
         <motion.div class="links" :initial="{ opacity: 0 }" :animate="{ opacity: 1, transition: { duration: 1 } }">
             <motion.a
             href="https://github.com/misshanya"
